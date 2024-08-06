@@ -32,6 +32,7 @@ app.use(helmet());
 app.use(mongoSanitize());
 app.use(xss());
 app.use(cors());
+app.set("trust proxy", true);
 
 //Body PARSER - to read data from req.body !!!
 app.use(express.json());
